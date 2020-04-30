@@ -1,0 +1,12 @@
+<h2>Edit the detail of <i>'<%= @product.name %></i>'</h2>
+<hr>
+
+<%= simple_form_for(:product, {:controller=>'products', :action=>'update'}, :method=>'patch') do |f| %>
+	<%= f.input :name %><br>
+	<%= f.input :price %><br>
+	<%= f.input :description %><br>
+	<%= f.submit "Update Product" %>
+<% end %>
+<br>
+<hr>
+<%= link_to "Home", products_path %>

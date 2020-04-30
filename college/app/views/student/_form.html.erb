@@ -1,0 +1,8 @@
+
+<%=  simple_form_for(@student) do |f| %>
+	<%= f.input  :name %><br>
+	<%= f.input  :address %><br>
+	<%= f.submit %>
+<% end %>  
+<br>
+<%= link_to "Back", student_path  %>

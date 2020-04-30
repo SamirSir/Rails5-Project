@@ -1,0 +1,18 @@
+<h1>Welcome To index</h1>
+
+ <%= "Count Name" %><br><br><br>
+ <% 7.times do |i| %>
+ 	<%= "Samir Angry Man" %><br>
+ <% end %>
+<br>
+ <%= link_to("Go to New View",
+ {
+ 	:controller => 'welcome',
+ 	:action => 'newview', 
+ 	:name => 'Samir',
+ 	:address => 'Banepa-9'
+ }) %>
+
+<% if(params.has_key?(:id) && params.has_key?(:message)) %><br><h3>
+	<%= "New View with id :#{params[:id]} and message: #{params[:message]} , has called" %></h3>
+<% end %>

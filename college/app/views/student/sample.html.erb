@@ -1,0 +1,11 @@
+<h2>Welcome to Sample </h2>
+
+<%= link_to " Go Index Page", { :controller=>'student', :action =>'index'} %>
+<h2>Fill up the form below: </h2>
+
+
+<%=  simple_form_for(:student) do |f| %>
+	<%= f.input  :name %><br>
+	<%= f.input  :address %><br>
+	<%= f.submit %>
+<% end %>  

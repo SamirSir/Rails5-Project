@@ -1,0 +1,17 @@
+
+ 
+<h1>Welcome to NewView</h1>
+
+<h3>
+<%= "Message from controller: #{@controller_message}" %></h3>
+
+<%if (params.has_key?('name') && params.has_key?('address'))%>
+	<%= "#{params[:name]} has called from #{params[:address]}"%>
+<% end %><br><br>
+
+<%= link_to("Go to index Page",
+	{   :controller => 'welcome',
+		:action => 'index',
+		:id => 10,
+		:message => "I am feeling irritate"
+	}) %>

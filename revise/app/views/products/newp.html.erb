@@ -1,0 +1,11 @@
+<h3>Enter new product here</h3>
+
+<%= simple_form_for(@product) do |f| %>
+	<%= f.input :name %><br>
+	<%= f.input :price %><br>
+	<%= f.input :description %><br>
+	<%= f.submit %>
+<% end %>
+<br>
+
+<%= link_to "Home", products_path %>

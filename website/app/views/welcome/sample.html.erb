@@ -1,0 +1,17 @@
+<h1>Welcome sample</h1>
+<p>Find me in app/views/welcome/sample.html.erb</p>
+
+<h1>Sample </h1>
+<%# referencing the main class: %>
+<%= "Message from controller : #{@controller_message}" %><br>
+<%= "Second call to controller . . . : #{@message2}" %>
+<br><br>
+<%= link_to("Go to Index", {:controller => 'welcome',
+	:action => 'index',
+	:id => 5,
+	:random => "Samir", }) %>
+ <br><br>
+<% if (params.has_key?(:number) && params.has_key?(:message)) %>
+	<%= "#{params['number']} sends the message :  #{params['message']}" %>
+<% end %>
+  		

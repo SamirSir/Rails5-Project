@@ -1,0 +1,20 @@
+<h1>Hello Students</h1>
+
+<%= link_to "Entry form for student", student_sample_path %><br><br>
+
+<!-- Showing the data from Student table  -->
+
+<% @student.each do |student| %>
+	<p>
+		<%= "#{student.id}. #{student.name} "+" . . .  " %>
+		<%= link_to "Show", std_path(student.id) %>
+		<%# link_to "Edit", edit_student_path(student) %>
+		<%= link_to "Delete", delete_student_path(student)%>
+	</p> 
+<% end %> 
+
+
+<br><br>
+<%= link_to " Enter Student Info", 
+	{:controller => 'student',
+		:action => 'sample'} %>

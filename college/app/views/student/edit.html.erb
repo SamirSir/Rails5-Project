@@ -1,0 +1,9 @@
+<h2><%= "Edit student detail here" %></h2>
+
+<%=  simple_form_for(@student) do |f| %>
+	<%= f.input  :name %><br>
+	<%= f.input  :address %><br>
+	<%= f.submit "Update Student" %>
+<% end %>  
+<br>
+<%= link_to "Back", student_path  %>	
